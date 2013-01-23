@@ -18,9 +18,6 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/chad-thompson/vagrantpress">View on GitHub</a>
 
-          <h1 id="project_title">Vagrantpress</h1>
-          <h2 id="project_tagline">A WordPress Development Environment With Vagrant/Puppet</h2>
-
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/chad-thompson/vagrantpress/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/chad-thompson/vagrantpress/tarball/master">Download this project as a tar.gz file</a>
@@ -31,32 +28,45 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h1>Say Hello to Vagrantpress</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>
+  <b>Vagrantpress</b> is a simple development enviroment for creating and modifying WordPress sites.  Using Vagrantpress is meant to be easy - explode
+  a zip (or .tar.gz) file into a directory and type
+</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>$ vagrant up
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>
+  Once vagrant builds the environment, you'll have a clean development 
+  environment for creating your own WordPress modules and themes.
+</p>
 
-<h3>Designer Templates</h3>
+<h3>What Do I Need to Get Started?</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>You'll need a working copy of the <a href="http://vagrantup.com">Vagrant</a> virtualization environment, as well as a working copy of <a href="http://virtualbox.org">VirtualBox</a>.</p>  In the short term, you'll 
+also need to provide your own 'box' until I get a recent copy of an Ubuntu
+box up and running.  (Or at least one that downloads in reasonable times on 
+reasonable bandwidths.)  In the meantime, you can edit the <code>Vagrantfile</code> to use your own box that supports <code>apt-get</code>
+and <code>git</code>.  The included puppet script should build the rest of 
+your environment with those basic commands.
 
-<h3>Rather Drive Stick?</h3>
+<h3>What Does VagrantPress include?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>VagrantPress will build a very simple LAMP stack, with an <a href="http://httpd.apache.org">Apache 2</a> install, a <a href="http://php.net">PHP 5</a> install and a <a href="http://mysql.org">MySQL</a> install.  At present, these systems (and
+  the puppet script) work against <a href="http://ubuntu.org">an Ubuntu 12.04 LTS</a> server box.  The puppet scripts will also clone the <a href="http://wordpress.org">WordPress</a> repository from GitHub, which should allow you to use many different versions of WordPress.  (The puppet script 
+  defaults to the latest release version of 3.5.)
+</p>
 
 <h3>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Vagrantpress is a personal project of  <a href="http://chadthompson.me" class="user-mention">@chad-thompson</a> who was looking for a simpler way to 
+  stand up multiple Wordpress environments.  This project is one of the first
+  'real' Vagrant environments (and puppet scripts) that I've put together, but
+  I hope that someone else finds this as useful as I do.
 
-<h3>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
     </div>
 
