@@ -7,11 +7,13 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu1204_64"
+  config.vm.box = "vagrant-ubuntu-1204_32"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  # config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
+  # NOTE:  This box is one created by Chad Thompson for use with 'Vagrantpress',
+  # the file is currently available (as of Jan. 2013) on the Amazon S3 service.
+  config.vm.box_url = "https://s3.amazonaws.com/chadthompson-me-vagrantboxes/vagrant-ubuntu-1204_32.box"
 
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
