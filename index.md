@@ -18,7 +18,7 @@ title: Say Hello to Vagrantpress
 
 
   Once vagrant builds the environment, you'll have a clean development 
-  environment for creating your own WordPress modules and themes.
+  environment for creating your own WordPress modules and themes by opening `http://localhost:8080/wodpress`.
 
 
 ###What Do I Need to Get Started?
@@ -27,7 +27,9 @@ title: Say Hello to Vagrantpress
 
 **Second**, you'll need a working copy of [Vagrant][].  You can find a copy of the latest version [on the Vagrant downloads page][vagrantdownloads], or follow directions in the [Vagrant documentation][vagrantdocumentation] to install vagrant for your environment.
 
-**... and that's it.**  From here, you can follow the four-command script above or get your own copy of Vagrantpress [from the github repository][vpgithub].  Vagrantpress uses [Puppet] scripting to set up the environment
+**... and that's it.**  From here, you can follow the four-command script above or get your own copy of Vagrantpress [from the github repository][vpgithub].  Vagrantpress uses [Puppet] scripting to set up a working Wordpress installation.
+
+**NOTE: ** you can log in to the Wordpress admin panel at `http://localhost:8080/wordpress/wp-admin/` with the username `admin` and the password `vagrant`.
 
 
 ###What Does VagrantPress Install?
@@ -43,6 +45,13 @@ The LAMP stack here (as tested) includes:
 * [PHP5][php]
 * [The MySQL Database][mysql]
 * [WordPress][] v. 3.5  (With the git clone command, you'll have access to all tagged releases of WordPress, but the puppet script currently creates a database appropriate for v. 3.5.  Earlier versions have not been tested at this writing.)
+
+### Now That It's Up and Running, Now What?
+
+You can use this environemnt to create, modify and experiment with Wordpress themeing and modules - either your own development or testing plugins for use on your 'real' Wordpress site.
+
+The Vagrantpress puppet script creates a folder called `WordPress` in the directory where the Vagrant virtual machine is running - you can create your own themes and modules in the `wp-content` directory as you would for any other type of Wordpress development.  This directory will also exist "on the host system", allowing you to use the development tools/editors of your choice.
+
   
 [vagrant]: http://vagrantup.com
 [vagrantdownloads]: http://downloads.vagrantup.com/
@@ -52,7 +61,7 @@ The LAMP stack here (as tested) includes:
 [vpgithub]: https://github.com/chad-thompson/vagrantpress
   
   [puppetlabs]: http://puppetlabs.org
-  [apache2]: http://httpd/apache.org
+  [apache2]: http://httpd.apache.org
   [php]: http://php.net
   [mysql]: http://mysql.org
   [ubuntu]: http://ubuntu.org
