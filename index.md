@@ -18,7 +18,7 @@ title: Say Hello to Vagrantpress
 
 
   Once vagrant builds the environment, you'll have a clean development 
-  environment for creating your own WordPress modules and themes by opening `http://localhost:8080/wodpress`.
+  environment for creating your own WordPress modules and themes by opening `http://localhost:8080/wordpress`.
 
 
 ###What Do I Need to Get Started?
