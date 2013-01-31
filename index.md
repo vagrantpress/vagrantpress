@@ -75,5 +75,5 @@ The Vagrantpress puppet script creates a folder called `WordPress` in the direct
 Vagrantpress is a personal project of  <a href="http://chadthompson.me" class="user-mention">@chad-thompson</a> who was looking for a simpler way to 
   stand up multiple Wordpress environments.  This project is one of the first
   'real' Vagrant environments (and puppet scripts) that I've put together, but
-  I hope that someone else finds this as useful as I do.  Please contact me if you've found this tool useful, have some questions, or would like to help out.
+  I hope that someone else finds this as useful as I do.  Please contact me if you've found this tool useful, have some questions, or would like to help out.  Thanks!
 
