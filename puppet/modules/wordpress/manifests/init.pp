@@ -12,17 +12,25 @@ class wordpress::install{
     command=>"/usr/bin/mysql -u root -pvagrant --execute=\"GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost' IDENTIFIED BY 'wordpress' \"",
   }
   
-  # Get a new copy of wordpress from github
+  # Get a new copy of the latest wordpress release
+
+	# FILE TO DOWNLOAD: http://wordpress.org/latest.tar.gz
+
+
+  
   exec{"git-wordpress": #tee hee
-    command=>"/usr/bin/git clone git://github.com/WordPress/WordPress.git",
-    cwd=>"/vagrant/"
+    command=>"/usr/bin/wget http://wordpress.org/latest.tar.gz",
+    cwd=>"/vagrant/",
+    creates=>"/vagrant/latest.tar.gz"
+  }
+
+  exec{"untar-wordpress":
+    cwd     => "/vagrant/",
+    command => "/bin/tar xzvf /vagrant/latest.tar.gz",
+    require => Exec["git-wordpress"],
   }
   
-  exec{"git-35":
-    command=>"/usr/bin/git checkout 3.5",
-    cwd=>"/vagrant/WordPress",
-  }
-  
+
   # Import a MySQL database for a basic wordpress site.
   file{
     "/tmp/wordpress-db.sql":
