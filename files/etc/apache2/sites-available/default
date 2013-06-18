@@ -2,21 +2,18 @@
 	ServerAdmin webmaster@localhost
 
 	DocumentRoot /vagrant
-	<Directory />
-		Options FollowSymLinks
-		AllowOverride None
-	</Directory>
-	<Directory /wordpress>
-		Options Indexes FollowSymLinks MultiViews
-		AllowOverride None
-		Order allow,deny
-		allow from all
-		RewriteEngine On
-		RewriteBase /wordpress/
-		RewriteRule ^index\.php$ - [L]
-		RewriteCond %{REQUEST_FILENAME} !-f
-		RewriteCond %{REQUEST_FILENAME} !-d
-		RewriteRule . /wordpress/index.php [L]
+	RewriteLogLevel 9
+	RewriteLog ${APACHE_LOG_DIR}/vagrant.rewrite.log
+
+	<Directory /vagrant>
+	    Options Indexes FollowSymLinks
+	    AllowOverride None
+	    RewriteEngine On
+	    RewriteBase /wordpress/
+	    RewriteRule ^index\.php$ - [L]
+	    RewriteCond %{REQUEST_FILENAME} !-f
+	    RewriteCond %{REQUEST_FILENAME} !-d
+	    RewriteRule . /wordpress/index.php [L]
 	</Directory>
 
 	ErrorLog ${APACHE_LOG_DIR}/vagrantpress.error.log
