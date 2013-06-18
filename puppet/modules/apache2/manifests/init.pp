@@ -7,10 +7,4 @@ class apache2::install{
       require => Package["apache2"],
     }
 
-    file { '/var/www':
-      ensure => link,
-      target => "/vagrant",
-      notify => Service['apache2'],
-      force  => true
-    }
   }
