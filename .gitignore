@@ -1,4 +1,5 @@
 
 .ey_local_data
-
-WordPress/
+.vagrant
+latest.tar.gz
+wordpress/
