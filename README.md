@@ -34,7 +34,7 @@ This repository tracks 2 projects:
   The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
   Please fork and contribute documentation additions to this branch only.
 
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!  (add)
+The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!  (add) 
 
 
 ## License
