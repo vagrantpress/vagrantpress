@@ -23,7 +23,7 @@ title: Say Hello to Vagrantpress
 
 ###What Do I Need to Get Started?
 
-**First**, you'll need a copy of a Virtual Machine environment.  Install a copy of [Oracle VirtualBox][virtualbox], the only currently supported VM environment for Vagrant.
+**First**, you'll need a copy of a Virtual Machine environment.  Install a copy of [Oracle VirtualBox][virtualbox], a freely supported VM environment for Vagrant.  (Vagrant also supports providers for different services, including a [provider for VMWare Fusion][vmwareprovider] - see the [Vagrant homepage][vagrant] for information.)
 
 **Second**, you'll need a working copy of [Vagrant][].  You can find a copy of the latest version [on the Vagrant downloads page][vagrantdownloads], or follow directions in the [Vagrant documentation][vagrantdocumentation] to install vagrant for your environment.
 
@@ -59,6 +59,7 @@ The Vagrantpress puppet script creates a folder called `WordPress` in the direct
 [virtualbox]: http://virtualbox.org
 [virtualboxdownloads]: https://www.virtualbox.org/wiki/Downloads
 [vpgithub]: https://github.com/chad-thompson/vagrantpress
+[vmwareprovider]: http://www.vagrantup.com/vmware
   
   [puppetlabs]: http://puppetlabs.org
   [apache2]: http://httpd.apache.org
