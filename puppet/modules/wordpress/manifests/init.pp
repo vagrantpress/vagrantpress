@@ -26,6 +26,7 @@ class wordpress::install {
     cwd     => '/vagrant/',
     command => '/bin/tar xzvf /vagrant/latest.tar.gz',
     require => Exec['download-wordpress'],
+    creates => '/vagrant/wordpress',
   }
 
   # Import a MySQL database for a basic wordpress site.
