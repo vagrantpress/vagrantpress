@@ -14,6 +14,8 @@ You’ll note that a copy of WordPress v. 3.5 has also been copied to the direct
 
 To log in to the local Wordpress installation at http://localhost:8080/wp-admin/ the username is `admin`, the password is `vagrant`.
 
+You can access phpMyAdmin at http://localhost:8080/phpmyadmin/ with username `wordpress`, password `wordpress`.
+
 ## A Few Details
 
 * I’m running this on a local ‘box’ (working on importing this one to S3) of Ubuntu 12.04LTS 64-bit.  This might be a bit full blown for a development environment - feel free to edit the Vagrantfile to include any other box you may have.  (My goal is to get a ‘real’ box loaded to S3 so the install/run is seamless.)
