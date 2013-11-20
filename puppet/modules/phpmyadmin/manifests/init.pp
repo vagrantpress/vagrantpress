@@ -2,7 +2,7 @@
 
 class phpmyadmin::install {
 
-  package { 'phpMyAdmin':
+  package { 'phpmyadmin':
     ensure => present,
   }
 
