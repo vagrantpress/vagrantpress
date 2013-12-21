@@ -34,12 +34,6 @@ class php5::install {
 		require => [Package['php-pear']]
 	}
 	
-	# install Xdebug
-	exec { "Install Xdebug" :
-		command => "/usr/bin/pecl install xdebug",
-		require => [Package['php5-dev']]
-	}
-	
 	# Set development values to our php.ini and xdebug.ini
 	augeas { 'set-php-ini-values':
 	    context => '/files/etc/php5/apache2/php.ini',
