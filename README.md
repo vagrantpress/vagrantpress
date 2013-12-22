@@ -22,6 +22,7 @@ I initially created this project to aid in developing child modules for a WordPr
 + phpmd
 + PHP_CodeBrowser
 + WordPress sniffs for phpcs
++ WordPress Unit Tests
 
 ## Getting Started
 
