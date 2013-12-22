@@ -10,6 +10,7 @@ I initially created this project to aid in developing child modules for a WordPr
 + Mysql
 + Php
 + Phpmyadmin
++ Subversion
 + PEAR
 + Xdebug
 + PHPUnit
