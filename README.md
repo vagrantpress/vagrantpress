@@ -10,6 +10,17 @@ I initially created this project to aid in developing child modules for a WordPr
 + Mysql
 + Php
 + Phpmyadmin
++ PEAR
++ Xdebug
++ PHPUnit
++ phploc
++ phpcpd
++ phpdcd
++ phpcs
++ phpdepend
++ phpmd
++ PHP_CodeBrowser
++ WordPress sniffs for phpcs
 
 ## Getting Started
 
