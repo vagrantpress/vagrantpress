@@ -28,6 +28,17 @@ class prepare {
     require => Exec["apt-get update"],
   }
 
+  exec{"whoami":
+    path=>"/bin:/usr/bin:/usr/local/bin",
+    logoutput => true,
+  }
+
+  file{"/root/.ssh": ensure => directory,}
+  file{"/root/.ssh/config":
+    ensure => present,
+    content => 'StrictHostKeyChecking no'
+  }
+
   exec{"librarian-puppet update":
     path => "/usr:/usr/bin:/usr/local/bin",
     cwd  => "/vagrant/puppet",
