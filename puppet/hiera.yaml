@@ -1,0 +1,12 @@
+---
+:backends: json
+
+:json:
+  :datadir: /etc/puppet/hieradata
+
+:hierarchy:
+  - environments/%{::environment}
+  - versions
+  - common
+
+:logger: puppet
