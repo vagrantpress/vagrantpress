@@ -52,6 +52,26 @@ You can use this environemnt to create, modify and experiment with Wordpress the
 
 The Vagrantpress puppet script creates a folder called `WordPress` in the directory where the Vagrant virtual machine is running - you can create your own themes and modules in the `wp-content` directory as you would for any other type of Wordpress development.  This directory will also exist "on the host system", allowing you to use the development tools/editors of your choice.
 
+
+### How Do I Get Help or Contribute to the project?
+
+There are three ways you can get started using and contributing to the project itself:
+
+1.  Use the project!  Let us know how it works for you.
+1.  [Join the mailing list / Google Group][vagrantpress-list]
+1.  [Contribute to issues and code on GitHub][vagrantpress-github]
+
+[vagrantpress-list]:
+[vagrantpress-github]: https://github.com/chad-thompson/vagrantpress
+
+### What's New in the Project?
+
+Admittedly, some of the project - simple as it is - is aging.  I've put together something of a
+[roadmap][vagrantpress-roadmap] for your perusal.
+
+[vagrantpress-roadmap]: https://github.com/chad-thompson/vagrantpress/blob/development/README.md
+
+
   
 [vagrant]: http://vagrantup.com
 [vagrantdownloads]: http://downloads.vagrantup.com/
