@@ -61,7 +61,7 @@ There are three ways you can get started using and contributing to the project i
 1.  [Join the mailing list / Google Group][vagrantpress-list]
 1.  [Contribute to issues and code on GitHub][vagrantpress-github]
 
-[vagrantpress-list]:
+[vagrantpress-list]:   https://groups.google.com/forum/#!forum/vagrantpress-users
 [vagrantpress-github]: https://github.com/chad-thompson/vagrantpress
 
 ### What's New in the Project?
