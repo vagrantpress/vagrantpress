@@ -24,6 +24,38 @@ I initially created this project to aid in developing child modules for a WordPr
 + WordPress sniffs for phpcs
 + WordPress Unit Tests
 
+## Development Branch RoadMap
+
+**NOTE**: This roadmap is definitely open to discussion.  I'm going
+
+As this is the 'development' branch, you'll notice a few things are different here.  In particular,
+I'm doing a couple of different things to the codebase.  My roadmap for a few of these changes:
+
+1.  Updating the puppet portions of the project to fit into puppet best practices, using forge
+    modules.  As such, you'll note that `librarian-puppet` will be installed into the virtual machine.
+1.  Wordpress provisioning and operations will use a module that is built around the [wp-cli project][wpcli].
+    WP-CLI is an incredibly rich toolkit that I would like to leverage in provisioning - mainly for the
+    practical reason of the massive development efforts in that project. Leveraging that work would be
+    vastly more useful than re-implementing using puppet `exec` calls.
+1.  I want to tie the development environment here with the option for creating / contributing to real
+    deployment environments.  The strength of the vagrant/puppet approach to development environments is
+    that your development environment can mimic production environments 'better' than approaches like
+    local PHP installs, MAMP, etc.  While doing all of this work in vagrant, why not make packaging your
+    environment into a re-deployable unit using puppet or docker on production systems?  I want to make
+    that transition easier than it is in the project today.
+
+## Project roadmaps
+
+1.  With the 'completion' of the development branch, I am going to transfer this project from my own personal
+    account to the 'Vagrantpress' organization.  That will make the project a little more visible and
+    hopefully will emphasize the community-driven aspect of the project a little more.  (I do really appreciate
+    the help I've received, the feedback I've gotten from users and the many, many forks of the project created
+    by people that have found this project to be a good starting spot for their own workflows.
+1.  I want to set up a users list so that getting help and using the project is a little easier.  I do appreciate
+    that people are resourceful enough to find me on my personal web page, etc. - getting help ought to be
+    a little easier than that.
+
+
 ## Getting Started
 
 This is a fairly simple project to get up and running.  
@@ -52,3 +84,4 @@ You can access phpMyAdmin:
 Feel free to file an issue, create a pull request, or contact me at [my website][chadthompson].
 
 [chadthompson]: http://chadthompson.me
+[wpcli]:  http://wp-cli.org

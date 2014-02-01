@@ -28,11 +28,6 @@ class prepare {
     require => Exec["apt-get update"],
   }
 
-  exec{"whoami":
-    path=>"/bin:/usr/bin:/usr/local/bin",
-    logoutput => true,
-  }
-
   file{"/root/.ssh": ensure => directory,}
   file{"/root/.ssh/config":
     ensure => present,
@@ -48,12 +43,6 @@ class prepare {
 
 }
 
-
-
-#exec { 'apt_update':
-#  command => 'apt-get update',
-#  path    => '/usr/bin'
-#}
 
 #class { 'git::install': }
 #class { 'subversion::install': }
