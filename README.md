@@ -44,6 +44,10 @@ I'm doing a couple of different things to the codebase.  My roadmap for a few of
     environment into a re-deployable unit using puppet or docker on production systems?  I want to make
     that transition easier than it is in the project today.
 
+... and along with all of that, when I'm ready with the dev branch I will cut a 'release' of the current
+state of the project so users can continue to fork it if they wish.  In the end, I don't want to remove
+functionality but rather have a better base to add more and better functionality.
+
 ## Project roadmaps
 
 1.  With the 'completion' of the development branch, I am going to transfer this project from my own personal

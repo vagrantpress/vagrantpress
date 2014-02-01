@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51c283aa-8e24-4ad4-a4f7-fd1c4fae72f2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/puppet/manifests/site.pp" afterPath="$PROJECT_DIR$/puppet/manifests/site.pp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="vagrantpress.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="31" selection-start="2726" selection-end="2726" vertical-scroll-proportion="0.6511628" vertical-offset="433" max-vertical-offset="1395">
+            <state line="48" column="81" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.8471761" vertical-offset="210" max-vertical-offset="1455">
               <folding />
             </state>
           </provider>
@@ -58,7 +58,7 @@
       <file leaf-file-name="site.pp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/puppet/manifests/site.pp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="900">
+            <state line="45" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -67,7 +67,7 @@
       <file leaf-file-name="bootstrap.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootstrap.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="61" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+            <state line="29" column="61" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="645">
               <folding />
             </state>
           </provider>
@@ -128,6 +128,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,7 +199,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,7 +308,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2624894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26672313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -340,6 +340,44 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="22" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="31" selection-start="2726" selection-end="2726" vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/puppet/Puppetfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="49" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/puppet/manifests/site.pp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="786" selection-end="786" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="61" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vagrantfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="22" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="765">
@@ -426,7 +464,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="31" selection-start="2726" selection-end="2726" vertical-scroll-proportion="0.6511628" vertical-offset="433" max-vertical-offset="1395">
+        <state line="48" column="81" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.8471761" vertical-offset="210" max-vertical-offset="1455">
           <folding />
         </state>
       </provider>
