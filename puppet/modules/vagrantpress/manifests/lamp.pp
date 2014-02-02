@@ -2,6 +2,7 @@
 
 class vagrantpress::lamp(
   $web_root,
+  $mysql_pass
 ){
 
   file{"${web_root}":
@@ -41,11 +42,34 @@ class vagrantpress::lamp(
       notify => Service["apache2"],
    }
 
-
   file{"${web_root}/index.php":
     ensure => present,
     content => "<?php phpinfo(); \n",
   }
+
+
+  ## Install mysql
+  class{"::mysql::server":
+    root_password => "${mysql_pass}",
+    override_options =>  { 'mysqld' => {'bind_address' => '0.0.0.0' }  }
+  }
+
+  mysql_user{'root@%':
+      ensure => 'present',
+      password_hash => '*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B',
+  }
+
+  mysql_grant{'root@%/*.*':
+    ensure => 'present',
+    options => ['GRANT'],
+    privileges => ['ALL'],
+    table => '*.*',
+    user  => 'root@%',
+  }
+
+  ## Grant some privileges. WARNING - you wouldn't want to make these this way in a prod environment.
+
+
 
 
 

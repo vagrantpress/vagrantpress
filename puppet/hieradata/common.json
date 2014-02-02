@@ -1,5 +1,7 @@
 {
-    "vagrantpress::lamp::web_root": "/vagrant/webroot"
+    "vagrantpress::lamp::web_root": "/vagrant/webroot",
+    "vagrantpress::lamp::mysql_pass": "root",
+    "vagrantpress::lamp::mysql_pass_hash": "*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B"
 
 
 
