@@ -6,3 +6,8 @@ latest.tar.gz
 ./wordpress/
 /wordpress/
 /wp-tests/
+puppet/modules/apache
+puppet/modules/concat
+puppet/modules/mysql
+puppet/modules/stdlib
+

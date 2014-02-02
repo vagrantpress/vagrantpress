@@ -59,6 +59,14 @@ functionality but rather have a better base to add more and better functionality
     that people are resourceful enough to find me on my personal web page, etc. - getting help ought to be
     a little easier than that.
 
+### DEVELOPMENT NOTES
+
+* I've added the 'wpcli' module directly to this project for now - I'll migrate it later.  The problem: if I'm going
+  to use `librarian-puppet` for module management the 'git' function requires the virtual machine to have a
+  valid (and registered) SSH key.  This can be a little daunting to set up in the vagrant machines if you
+  want to pitch in a do a little testing.  After the wpcli module is published to the puppet forge, that requirement
+  will go away.
+
 
 ## Getting Started
 
