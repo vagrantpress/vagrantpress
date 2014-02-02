@@ -44,7 +44,7 @@ The LAMP stack here (as tested) includes:
 * [The Apache2 WebServer][apache2]
 * [PHP5][php]
 * [The MySQL Database][mysql]
-* [WordPress][] v. 3.5  (With the git clone command, you'll have access to all tagged releases of WordPress, but the puppet script currently creates a database appropriate for v. 3.5.  Earlier versions have not been tested at this writing.)
+* [WordPress][] v. 3.8  (With the git clone command, you'll have access to all tagged releases of WordPress, but the puppet script currently creates a database appropriate for v. 3.8.  Earlier versions have not been tested at this writing.  See the roadmap sections for more detai about where the project is going.)
 
 ### Now That It's Up and Running, Now What?
 
