@@ -4,8 +4,8 @@ forge "http://forge.puppetlabs.com"
 mod 'puppetlabs/apache'
 mod 'puppetlabs/mysql'
 
-mod 'wpcli',
-   :git => 'git@github.com:vagrantpress/wpcli.git'
+#mod 'wpcli',
+#   :git => 'git@github.com:vagrantpress/wpcli.git'
 
 # mod 'ntp',
 #   :git => 'git://github.com/puppetlabs/puppetlabs-ntp.git'

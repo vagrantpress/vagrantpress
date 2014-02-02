@@ -28,19 +28,18 @@ class prepare {
     require => Exec["apt-get update"],
   }
 
-  file{"/root/.ssh": ensure => directory,}
-  file{"/root/.ssh/config":
+  file{"/home/vagrant/.ssh": ensure => directory,}
+  file{"/home/vagrant/.ssh/config":
     ensure => present,
     content => 'StrictHostKeyChecking no'
   }
 
   exec{"librarian-puppet update":
-    path => "/usr:/usr/bin:/usr/local/bin",
+    path => "/bin:/usr/bin:/usr/local/bin",
     cwd  => "/vagrant/puppet",
     require => Package["librarian-puppet", "git"],
     environment => ["HOME=/home/vagrant"],
   }
-
 }
 
 
