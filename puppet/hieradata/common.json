@@ -1,1 +1,6 @@
-{}
+{
+    "vagrantpress::lamp::web_root": "/vagrant/webroot"
+
+
+
+}

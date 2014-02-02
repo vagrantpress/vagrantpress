@@ -38,7 +38,7 @@
 
 
 class vagrantpress {
-  class{"vagrantpress::prepare": }
+  class{"vagrantpress::prepare": }->class{"vagrantpress::lamp": }
 
 
 }

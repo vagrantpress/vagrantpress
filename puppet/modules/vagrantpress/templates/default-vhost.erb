@@ -1,0 +1,30 @@
+<VirtualHost *:80>
+    ServerName default
+    ServerAdmin root@localhost
+
+    ## Vhost docroot
+    DocumentRoot /vagrant/webroot
+
+
+
+    ## Directories, there should at least be a declaration for /var/www
+
+    <Directory /vagrant/webroot >
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    ## Load additional static includes
+
+
+    ## Logging
+    ErrorLog /var/log/apache2/default_error.log
+    ServerSignature Off
+    CustomLog /var/log/apache2/access.log combined
+
+    ## Script alias directives
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin
+</VirtualHost>
+

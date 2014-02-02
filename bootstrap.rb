@@ -1,4 +1,6 @@
 class BaseBootstrap
+
+
   def self.check_puppet
 
     if `which puppet`.empty?
@@ -23,12 +25,28 @@ class BaseBootstrap
 
 
   end
+
+  def self.link_hiera
+    if ! File.symlink?("/etc/puppet/hieradata")
+      File.symlink("/vagrant/puppet/hieradata", "/etc/puppet/hieradata")
+    end
+
+    if ! File.symlink?("/etc/hiera.yaml")
+
+      File.delete("/etc/hiera.yaml")
+      File.symlink("/vagrant/puppet/hiera.yaml", "/etc/hiera.yaml")
+    end
+
+
+  end
+
 end
 
 
 # Steps For Bootstrapping the instance
 begin
   BaseBootstrap.check_puppet
+  BaseBootstrap.link_hiera
 end
 
 
