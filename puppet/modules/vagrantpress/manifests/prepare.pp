@@ -22,11 +22,16 @@ class vagrantpress::prepare{
     content => 'StrictHostKeyChecking no'
   }
 
+  file{"/tmp/librarian-puppet":
+    ensure => directory,
+    mode => 0775,
+  }
+
   exec{"librarian-puppet update":
     path => "/bin:/usr/bin:/usr/local/bin",
     cwd  => "/vagrant/puppet",
-    require => Package["librarian-puppet", "git"],
-    environment => ["HOME=/home/vagrant"],
+    require => [Package["librarian-puppet", "git"], File["/tmp/librarian-puppet"]],
+    environment => ["HOME=/home/vagrant", "LIBRARIAN_PUPPET_TMP=/tmp/librarian-puppet"],
   }
 
 
