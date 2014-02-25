@@ -5,6 +5,9 @@
 	RewriteLogLevel 9
 	RewriteLog ${APACHE_LOG_DIR}/vagrant.rewrite.log
 
+# correct caching issue where edited images do not refresh http://www.mabishu.com/blog/2013/05/07/solving-caching-issues-with-vagrant-on-vboxsf/
+EnableSendfile off
+
 	<Directory /vagrant/wordpress>
 	    Options Indexes FollowSymLinks
 	    AllowOverride None
