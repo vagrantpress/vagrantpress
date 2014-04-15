@@ -2,7 +2,7 @@
 :backends: json
 
 :json:
-  :datadir: /etc/puppet/hieradata
+  :datadir: /vagrant/puppet/hieradata
 
 :hierarchy:
   - environments/%{::environment}
