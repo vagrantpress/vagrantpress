@@ -38,11 +38,13 @@
 
 
 class vagrantpress {
-  class{"vagrantpress::prepare": }->class{"vagrantpress::lamp": }->class{"vagrantpress::wpcli":}
+  class{"vagrantpress::prepare": }->class{"vagrantpress::lamp": }
 
-  wpcli{"/usr/local/bin/wp":
-    ensure => installed,
-  }
+#->class{"vagrantpress::wpcli":}
+
+#  wpcli{"/usr/local/bin/wp":
+#    ensure => installed,
+#  }
 
 
 }

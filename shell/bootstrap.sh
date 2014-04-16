@@ -26,13 +26,29 @@ PUPPET_DIR=/etc/puppet/
 
 #  Check for puppet install
 
+
     if hash puppet >/dev/null; then
-        echo "*** Don't install puppet "
+        PUPPET_VERSION=`puppet --version`
+        echo "*** ${PUPPET_VERSION})"
+
+        if [ !"${PUPPET_VERSION}"=~'3' ]; then
+          echo "** Update Puppet"
+          cd /tmp/; wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb;
+          cd /tmp/; dpkg -i puppetlabs-release-precise.deb;
+          apt-get -q -y update
+          apt-get -q -y install puppet
+        else
+           echo '*** Puppet install not needed'
+        fi
+
+
     else
         echo "*** Install Puppet "     # Need to do some OS-specific installs here.
                                        # For Development, assume Ubuntu / Precise 64
         cd /tmp/; wget https://apt.puppetlabs.com/puppetlabs-release-precise.deb
         cd /tmp/; dpkg -i puppetlabs-release-precise.deb
+        apt-get -q -y update
+        apt-get -q -y install puppet
 
     fi
 
@@ -62,8 +78,8 @@ if [ ! -d "$PUPPET_DIR" ]; then
 fi
 
 # Link hiera.yaml to the puppet version
-if [ ! -L /etc/hiera.yaml ]; then
-  ln -s /vagrant/puppet/hiera.yaml /etc/hiera.yaml
+if [ ! -L /etc/puppet/hiera.yaml ]; then
+  ln -s /vagrant/puppet/hiera.yaml /etc/puppet/hiera.yaml
 fi
 
 

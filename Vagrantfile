@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "hashicorp/precise64"
 
   # Set a box hostname
-  config.vm.hostname = "vagrantpress.local"
+  config.vm.hostname = "vagrantpress"
 
   # config.vm.box_url = "http://domain.com/path/to/above.box"
 
@@ -33,6 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
 
 
+
   # A bootstrapping shell for checking for puppet.
   config.vm.provision "shell", path: "shell/bootstrap.sh"
 
@@ -41,7 +42,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.module_path = "puppet/modules"
     puppet.manifest_file  = "site.pp"
     puppet.working_directory = '/vagrant/puppet'
-
     puppet.manifest_file  = "site.pp"
     #puppet.options = "--hiera_config=/vagrant/puppet/hiera.yaml"
     #puppet.options="--verbose --debug"
