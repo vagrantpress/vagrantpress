@@ -11,22 +11,14 @@ class vagrantpress::lamp(
     group  => 'vagrant',
   }
 
-
-
   class{"apache":
      mpm_module => 'prefork',
      default_vhost => true,
   }
 
-  # NOTE:  ubuntu speicfic.
-  file{"/var/log/apache2":
-    ensure => 'directory',
-    group  => 'www-data',
-    mode   => '0775',
-    recurse => true,
-    notify => Service["apache2"],
-  }
 
+
+  # Installs basic PHP
   class{"apache::mod::php": }
 
   # NOTE:  I'll use a file here, the default vhost settings for
@@ -66,16 +58,6 @@ class vagrantpress::lamp(
     table => '*.*',
     user  => 'root@%',
   }
-
-  ## Grant some privileges. WARNING - you wouldn't want to make these this way in a prod environment.
-
-
-
-
-
-
-
-
 
 
 }
