@@ -16,8 +16,6 @@ class vagrantpress::lamp(
      default_vhost => true,
   }
 
-
-
   # Installs basic PHP
   class{"apache::mod::php": }
 

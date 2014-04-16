@@ -42,9 +42,9 @@ class vagrantpress {
 
 #->class{"vagrantpress::wpcli":}
 
-#  wpcli{"/usr/local/bin/wp":
-#    ensure => installed,
-#  }
+  wpcli{"/usr/local/bin/wp":
+    ensure => present,
+  }
 
 
 }
