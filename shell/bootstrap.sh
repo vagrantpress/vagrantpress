@@ -90,3 +90,11 @@ if [ "$(gem search -i librarian-puppet)" = "false" ]; then
 else
   cd $PUPPET_DIR && librarian-puppet update
 fi
+
+if [ ! -L /etc/puppet/modules/wpcli ]; then
+  ln -s /vagrant/puppet/modules/wpcli /etc/puppet/modules/wpcli
+fi
+
+if [ ! -L /etc/puppet/modules/vagrantpress ]; then
+  ln -s /vagrant/puppet/modules/vagrantpress /etc/puppet/modules/vagrantpress
+fi

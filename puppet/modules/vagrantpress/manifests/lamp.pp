@@ -11,6 +11,10 @@ class vagrantpress::lamp(
     group  => 'vagrant',
   }
 
+
+
+
+  ## APACHE PREFORK
   class{"apache":
      mpm_module => 'prefork',
      default_vhost => true,
@@ -18,6 +22,14 @@ class vagrantpress::lamp(
 
   # Installs basic PHP
   class{"apache::mod::php": }
+
+  ## INSTALL WPCLI
+  wpcli{"/usr/local/bin/wp":
+    ensure => present,
+    require => Class["apache::mod::php"],
+  }
+
+
 
   # NOTE:  I'll use a file here, the default vhost settings for
   # the puppetlabs module can't be easily overridden.

@@ -13,8 +13,6 @@ Puppet::Type.type(:wpcli).provide(:ruby) do
 
     # Change permissions to executable.
     FileUtils.chmod 0755, '/usr/local/bin/wp', :verbose => true
-
-
   end
 
   def destroy
@@ -22,7 +20,7 @@ Puppet::Type.type(:wpcli).provide(:ruby) do
   end
 
   def exists?
-    # Look for the executable
     return false
+    #system("which wp > /dev/null 2>&1")
   end
 end

@@ -40,11 +40,7 @@
 class vagrantpress {
   class{"vagrantpress::prepare": }->class{"vagrantpress::lamp": }
 
-#->class{"vagrantpress::wpcli":}
 
-  wpcli{"/usr/local/bin/wp":
-    ensure => present,
-  }
 
 
 }
