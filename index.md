@@ -27,9 +27,9 @@ title: Say Hello to Vagrantpress
 
 **Second**, you'll need a working copy of [Vagrant][].  You can find a copy of the latest version [on the Vagrant downloads page][vagrantdownloads], or follow directions in the [Vagrant documentation][vagrantdocumentation] to install vagrant for your environment.
 
-**... and that's it.**  From here, you can follow the four-command script above or get your own copy of Vagrantpress [from the github repository][vpgithub].  Vagrantpress uses [Puppet] scripting to set up a working Wordpress installation.
+**... and that's it.**  From here, you can follow the four-command script above or get your own copy of Vagrantpress [from the github repository][vpgithub].  Vagrantpress uses [Puppet] scripting to set up a working WordPress installation.
 
-**NOTE: ** you can log in to the Wordpress admin panel at `http://localhost:8080/wp-admin/` with the username `admin` and the password `vagrant`.
+**NOTE: ** you can log in to the WordPress admin panel at `http://localhost:8080/wp-admin/` with the username `admin` and the password `vagrant`.
 
 
 ###What Does VagrantPress Install?
@@ -48,9 +48,9 @@ The LAMP stack here (as tested) includes:
 
 ### Now That It's Up and Running, Now What?
 
-You can use this environment to create, modify and experiment with Wordpress theming and modules - either your own development or testing plugins for use on your 'real' Wordpress site.
+You can use this environment to create, modify and experiment with WordPress theming and modules - either your own development or testing plugins for use on your 'real' WordPress site.
 
-The Vagrantpress puppet script creates a folder called `WordPress` in the directory where the Vagrant virtual machine is running - you can create your own themes and modules in the `wp-content` directory as you would for any other type of Wordpress development.  This directory will also exist "on the host system", allowing you to use the development tools/editors of your choice.
+The Vagrantpress puppet script creates a folder called `WordPress` in the directory where the Vagrant virtual machine is running - you can create your own themes and modules in the `wp-content` directory as you would for any other type of WordPress development.  This directory will also exist "on the host system", allowing you to use the development tools/editors of your choice.
 
 
 ### How Do I Get Help or Contribute to the project?
@@ -94,7 +94,7 @@ Admittedly, some of the project - simple as it is - is aging.  I've put together
 ###Authors and Contributors
 
 Vagrantpress is a personal project of  <a href="http://chadthompson.me" class="user-mention">@chad-thompson</a> who was looking for a simpler way to 
-  stand up multiple Wordpress environments.  This project is one of the first
+  stand up multiple WordPress environments.  This project is one of the first
   'real' Vagrant environments (and puppet scripts) that I've put together, but
   I hope that someone else finds this as useful as I do.  Please contact me if you've found this tool useful, have some questions, or would like to help out.  Thanks!
 
