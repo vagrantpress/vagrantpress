@@ -48,7 +48,7 @@ The LAMP stack here (as tested) includes:
 
 ### Now That It's Up and Running, Now What?
 
-You can use this environemnt to create, modify and experiment with Wordpress theming and modules - either your own development or testing plugins for use on your 'real' Wordpress site.
+You can use this environment to create, modify and experiment with Wordpress theming and modules - either your own development or testing plugins for use on your 'real' Wordpress site.
 
 The Vagrantpress puppet script creates a folder called `WordPress` in the directory where the Vagrant virtual machine is running - you can create your own themes and modules in the `wp-content` directory as you would for any other type of Wordpress development.  This directory will also exist "on the host system", allowing you to use the development tools/editors of your choice.
 
