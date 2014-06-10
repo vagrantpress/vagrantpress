@@ -12,7 +12,7 @@ class apache2::install {
   }
 
   # the httpd.conf change the user/group that apache uses to run its process
-  file { '/etc/apache2/conf.d/user':
+  file { '/etc/apache2/conf-available/user.conf':
     ensure  => file,
     owner   => 'root',
     group   => 'root',
@@ -21,13 +21,17 @@ class apache2::install {
     require => Package['apache2'],
     notify  => Service['apache2'],
   }
+  file { '/etc/apache2/conf-enabled/user.conf':
+    ensure => link,
+    target => '/etc/apache2/conf-available/user.conf',
+  }
 
-  file { '/etc/apache2/sites-available/default':
+  file { '/etc/apache2/sites-available/default.conf':
     ensure  => file,
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    source  => '/vagrant/files/etc/apache2/sites-available/default',
+    source  => '/vagrant/files/etc/apache2/sites-available/default.conf',
     require => Package['apache2'],
     notify  => Service['apache2']
   }
@@ -42,9 +46,9 @@ class apache2::install {
     notify  => Service['apache2']
   }
 
-  file { '/etc/apache2/sites-enabled/000-default':
+  file { '/etc/apache2/sites-enabled/000-default.conf':
     ensure  => link,
-    target  => '/etc/apache2/sites-available/default',
+    target  => '/etc/apache2/sites-available/default.conf',
     require => Package['apache2'],
     notify  => Service['apache2'],
   }
