@@ -39,6 +39,7 @@ class phpqa::install{
 	# http:////github.com/WordPress-Coding-Standards/WordPress-Coding-Standards
 	exec { "Install WP phpcs sniffs":
 		command => "/usr/bin/git clone git://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git $(pear config-get php_dir)/PHP/CodeSniffer/Standards/WordPress",
+		unless  => "/usr/bin/test -d $(pear config-get php_dir)/PHP/CodeSniffer/Standards/WordPress",
 		require => Exec['pear update-channels', 'pear install phpcs']
 	}
 	
@@ -58,7 +59,7 @@ class phpqa::install{
 	
 	# install PHP_CodeBrowser
 	exec {"pear install PHP_CodeBrowser":
-	  command => "/usr/bin/pear install --alldeps pear.phpqatools.org/PHP_CodeBrowser",
+	  command => "/usr/bin/pear install --alldeps pear.phpunit.de/PHP_CodeBrowser",
 	  creates => '/usr/bin/phpcb',
 	  require => Exec['pear update-channels']
 	}
