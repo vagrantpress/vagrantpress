@@ -24,6 +24,11 @@ I initially created this project to aid in developing child modules for a WordPr
 + WordPress sniffs for phpcs
 + WordPress Unit Tests
 
+# Prerequisites
+
++ [Vagrant](http://www.vagrantup.com/downloads.html)
++ [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+
 ## Getting Started
 
 This is a fairly simple project to get up and running.  
