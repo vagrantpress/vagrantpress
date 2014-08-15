@@ -40,11 +40,11 @@ The Vagrantpress [puppet scripts][puppetlabs] will install a simple LAMP stack a
 
 The LAMP stack here (as tested) includes:
 
-* A virtual machine running the 12.04 LTS (32-bit) version of [Ubuntu][].
+* A virtual machine running the 14.04 LTS (i386/amd64) version of [Ubuntu][].
 * [The Apache2 WebServer][apache2]
 * [PHP5][php]
 * [The MySQL Database][mysql]
-* [WordPress][] v. 3.8  (With the git clone command, you'll have access to all tagged releases of WordPress, but the puppet script currently creates a database appropriate for v. 3.8.  Earlier versions have not been tested at this writing.  See the roadmap sections for more detai about where the project is going.)
+* [WordPress][] v. 3.8  (With the git clone command, you'll have access to all tagged releases of WordPress, but the puppet script currently creates a database appropriate for v. 3.8.  Earlier versions have not been tested at this writing.  See the roadmap sections for more detail about where the project is going.)
 
 ### Now That It's Up and Running, Now What?
 
