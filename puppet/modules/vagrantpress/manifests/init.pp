@@ -38,7 +38,9 @@
 
 
 class vagrantpress {
-  class{"vagrantpress::prepare": }->class{"vagrantpress::lamp": }
+  class{"vagrantpress::prepare":   }->
+  class{"vagrantpress::vp-phpfpm": }->
+  class{"vagrantpress::vp-nginx":  }
 
 
 

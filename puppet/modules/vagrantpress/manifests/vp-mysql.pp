@@ -1,6 +1,6 @@
 # This class deploys a basic LAMP stack.
 
-class vagrantpress::lamp(
+class vagrantpress::mysql(
   $web_root,
   $mysql_pass
 ){

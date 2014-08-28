@@ -1,7 +1,7 @@
 forge "http://forge.puppetlabs.com"
 
-# mod 'puppetlabs/stdlib'
-mod 'puppetlabs/apache'
+
+mod 'jfryman-nginx'
 mod 'puppetlabs/mysql'
 
 #mod 'wpcli',
