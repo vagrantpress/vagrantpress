@@ -8,7 +8,7 @@ class vagrantpress::prepare{
     content => 'StrictHostKeyChecking no'
   }
 
-  package{"curl":
+  package{["curl", "php5-cli"]:
     ensure => "installed",
   }
 

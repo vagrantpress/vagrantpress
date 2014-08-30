@@ -4,7 +4,7 @@ Puppet::Type.type(:wpcli).provide(:ruby) do
 
   commands :curlcmd => 'curl'
 
-  WPCLI_URL= 'https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar'
+  WPCLI_URL= 'https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar'
 
   def create
     STDOUT.puts "INSTALL WP-CLI"

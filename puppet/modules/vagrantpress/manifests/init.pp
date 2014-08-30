@@ -39,8 +39,13 @@
 
 class vagrantpress {
   class{"vagrantpress::prepare":   }->
+  class{"vagrantpress::vp-mysql":
+    web_root => '/vagrant/html',
+    mysql_pass => 'pass',
+  }->
   class{"vagrantpress::vp-phpfpm": }->
-  class{"vagrantpress::vp-nginx":  }
+  class{"vagrantpress::vp-nginx":  }->
+  class{"vagrantpress::wordpress": }
 
 
 
