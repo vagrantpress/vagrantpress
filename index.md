@@ -85,7 +85,7 @@ Admittedly, some of the project - simple as it is - is aging.  I've put together
   [apache2]: http://httpd.apache.org
   [php]: http://php.net
   [mysql]: http://mysql.org
-  [ubuntu]: http://ubuntu.org
+  [ubuntu]: http://ubuntu.com
   [wordpress]: http://wordpress.org
   [wordpress-git]: http://github.org/wordpress/wordpress
   
