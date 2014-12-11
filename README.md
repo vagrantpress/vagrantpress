@@ -35,7 +35,7 @@ This is a fairly simple project to get up and running.
 The procedure for starting up a working WordPress is as follows:
 
 1. Clone the project.  (There’s only master branch.)
-2. Run the command `vagrant up`
+2. Run the command `vagrant up` from the directory
 3. Open your browser to http://localhost:8080
 
 ## Working with the environment
