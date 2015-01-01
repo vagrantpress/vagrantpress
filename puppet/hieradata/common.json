@@ -1,7 +1,7 @@
 {
     "vagrantpress": {
         "lamp": {
-           "web_root"         : "/vagrant/webroot",
+           "web_root"         : "/vagrant/html",
            "mysql_pass"       :"root",
            "mysql_pass_hash"  :"*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B"
         }
@@ -15,16 +15,20 @@
         "default" :  {
             "site_root"      : "/",
             "site_title"     : "Default Wordpress",
+            "site_hostname"  : "localhost",
             "admin_user"     : "admin",
             "admin_password" : "admin",
-            "admin_email"    : "admin@example.com"
+            "admin_email"    : "admin@example.com",
+            "multisite"      : "false"
          },
         "example.com" : {
             "site_root"      : "/example.com",
             "site_title"     : "Example Dot Com",
+            "site_hostname"  : "example.com",
             "admin_user"     : "admin",
             "admin_password" : "admin",
-            "admin_email"    : "admin@example.com"
+            "admin_email"    : "admin@example.com",
+            "multisite"      : "true"
         }
     }
 }

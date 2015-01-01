@@ -5,21 +5,10 @@ class vagrantpress::wordpress(
 
   notify{"Set up WP sites": }
 
-  ## READ VHOST SETTINGS FROM HIERA FILE
-  site{"${sites}": }
-
-
-
-
-
   ## CREATE VHOSTS BASED ON AVAILALBE SITES
 
+  create_resources('vagrantpress::wordpress::site', $sites)
+
 
 }
 
-define site(
-
-){
-
-    notify{"Create site": }
-}
