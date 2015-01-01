@@ -4,6 +4,13 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
+# Include the configuration file
+CONFIG = "#{File.dirname(__FILE__)}/config.rb"
+puts CONFIG
+if File.exist?(CONFIG)
+  require CONFIG
+end
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
@@ -11,10 +18,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Using the default hashicorp / Ubuntu 12.04 LTS version.
   # If you would like to use a different box, edit this parameter.
-  config.vm.box = "hashicorp/precise64"
+  puts $options
+  if $options.key?(:box_file)
+    config.vm.box = $options[:box_file]
+  else
+    puts "Using Default"
+    config.vm.box = "hashicorp/precise32"
+  end
 
   # Set a box hostname
-  config.vm.hostname = "vagrantpress"
+  if $options.key?(:box_hostname)
+    config.vm.hostname = $options[:box_hostname]
+  else
+    config.vm.hostname = 'vagrantpress'
+  end
 
   # config.vm.box_url = "http://domain.com/path/to/above.box"
 
@@ -43,6 +60,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.manifest_file  = "site.pp"
     puppet.working_directory = '/vagrant/puppet'
     puppet.manifest_file  = "site.pp"
+    puppet.facter = {
+        "webserver" => $options[:webserver]
+
+    }
     #puppet.options = "--hiera_config=/vagrant/puppet/hiera.yaml"
     #puppet.options="--verbose --debug"
   end

@@ -36,16 +36,36 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 
-
 class vagrantpress {
-  class{"vagrantpress::prepare":   }->
-  class{"vagrantpress::vp-mysql":
-    web_root => '/vagrant/html',
-    mysql_pass => 'pass',
-  }->
-  class{"vagrantpress::vp-phpfpm": }->
-  class{"vagrantpress::vp-nginx":  }->
-  class{"vagrantpress::wordpress": }
+# Check to see what dependencies are specified in facts.
+  case $::webserver {
+    'apache': {
+      include vagrantpress::web::vp-apache
+    }
+
+    'nginx': {
+      notify{'Install NGINX - NOT COMPLETE': }
+      include vagrantpress::web::vp-nginx
+    }
+
+    'default' : {
+      # Specify default to be apache.
+      notify{'Default Web Server Not Specified - Installing Apache / PHP Runtime': }
+      include vagrantpress::web::vp-apache
+    }
+  }
+
+
+
+
+ # class{"vagrantpress::prepare":   }->
+ # class{"vagrantpress::vp-mysql":
+ #   web_root => '/vagrant/html',
+ #   mysql_pass => 'pass',
+ # }->
+ # class{"vagrantpress::vp-phpfpm": }->
+ # class{"vagrantpress::vp-nginx":  }->
+ # class{"vagrantpress::wordpress": }
 
 
 

@@ -1,4 +1,4 @@
-class vagrantpress::vp-nginx{
+class vagrantpress::web::vp-nginx{
 
   include nginx
 

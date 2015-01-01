@@ -3,6 +3,7 @@ forge "http://forge.puppetlabs.com"
 
 mod 'jfryman-nginx'
 mod 'puppetlabs/mysql'
+mod 'puppetlabs/apache'
 
 #mod 'wpcli',
 #   :git => 'git@github.com:vagrantpress/wpcli.git'
