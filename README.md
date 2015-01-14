@@ -11,18 +11,20 @@ I initially created this project to aid in developing child modules for a WordPr
 + Php
 + Phpmyadmin
 + Subversion
-+ PEAR
++ *PEAR - *removed*
 + Xdebug
-+ PHPUnit
-+ phploc
-+ phpcpd
-+ phpdcd
-+ phpcs
-+ phpdepend
-+ phpmd
-+ PHP_CodeBrowser
-+ WordPress sniffs for phpcs
-+ WordPress Unit Tests
++ *PHPUnit - *removed*
++ *phploc - *removed*
++ *phpcpd - *removed*
++ *phpdcd - *removed*
++ *phpcs - *removed*
++ *phpdepend - *removed*
++ *phpmd - *removed*
++ *PHP_CodeBrowser - *removed*
++ *WordPress sniffs for phpcs - *removed*
++ *WordPress Unit Tests - *removed*
+
+**PEAR and related tools are temporarily removed since PEAR support has reached end of life, see [End of Life for PEAR Installation Method](https://github.com/sebastianbergmann/phpunit/wiki/End-of-Life-for-PEAR-Installation-Method)*
 
 # Prerequisites
 
