@@ -10,7 +10,7 @@ class php5::install {
 	  'php5-fpm',
 	  'libapache2-mod-php5',
 	  'php5-dev',
-	  'php5-xdebug',
+	  'php5-xdebug'
 	]:
 	ensure => present,
 	}

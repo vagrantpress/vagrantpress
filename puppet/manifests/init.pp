@@ -10,3 +10,4 @@ class { 'php5::install': }
 class { 'mysql::install': }
 class { 'wordpress::install': }
 class { 'phpmyadmin::install': }
+class { 'composer::install': }
