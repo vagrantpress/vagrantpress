@@ -11,6 +11,8 @@ I initially created this project to aid in developing child modules for a WordPr
 + Php
 + Phpmyadmin
 + Subversion
++ Git
++ Composer
 + ~~PEAR~~
 + Xdebug
 + PHPUnit - **installed via composer*
@@ -24,7 +26,7 @@ I initially created this project to aid in developing child modules for a WordPr
 + WordPress sniffs for phpcs
 + WordPress Unit Tests - **installed via composer*
 
-**PEAR removed since as support has reached end of life, see [End of Life for PEAR Installation Method](https://github.com/sebastianbergmann/phpunit/wiki/End-of-Life-for-PEAR-Installation-Method)*
+**PEAR removed as support has reached end of life, see [End of Life for PEAR Installation Method](https://github.com/sebastianbergmann/phpunit/wiki/End-of-Life-for-PEAR-Installation-Method)*
 
 # Prerequisites
 
