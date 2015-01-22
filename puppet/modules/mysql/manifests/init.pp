@@ -18,7 +18,6 @@ class mysql::install {
     ],
     refreshonly => true,
     unless      => "mysqladmin -uroot -p${password} status",
-    path        => '/bin:/usr/bin',
     command     => "mysqladmin -uroot password ${password}",
   }
 

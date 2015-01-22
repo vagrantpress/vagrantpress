@@ -6,7 +6,6 @@ class phpqa::install{
   exec { "composer install phpunit":
     command => 'composer global require "phpunit/phpunit=4.4.*"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
 
@@ -14,7 +13,6 @@ class phpqa::install{
   exec { "composer install phploc":
     command => 'composer global require "phploc/phploc=*"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
 
@@ -22,7 +20,6 @@ class phpqa::install{
   exec { "composer install phpcpd":
     command => 'composer global require "sebastian/phpcpd=*"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
 
@@ -30,7 +27,6 @@ class phpqa::install{
   exec { "composer install phpcs":
     command => 'composer global require "squizlabs/php_codesniffer=2.1.*"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
 
@@ -46,7 +42,6 @@ class phpqa::install{
   exec { "composer install pdepend":
     command => 'composer global require "pdepend/pdepend=2.0.*"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
 
@@ -54,7 +49,6 @@ class phpqa::install{
   exec { "composer install phpmd":
     command => 'composer global require "phpmd/phpmd=2.1.*"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
 
@@ -62,7 +56,6 @@ class phpqa::install{
   exec { "composer install PHP_CodeBrowser":
     command => 'composer global require "mayflower/php-codebrowser=~1.1"',
     environment => ["COMPOSER_HOME=/usr/local/bin"],
-    path    => '/usr/bin:/usr/local/bin:~/.composer/vendor/bin/',
     require => Exec['install composer']
   }
   
