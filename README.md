@@ -32,6 +32,7 @@ I initially created this project to aid in developing child modules for a WordPr
 
 + [Vagrant](http://www.vagrantup.com/downloads.html)
 + [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
++ [Vagrant Hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater)
 
 ## Getting Started
 
@@ -39,18 +40,19 @@ This is a fairly simple project to get up and running.
 The procedure for starting up a working WordPress is as follows:
 
 1. Clone the project.  (There’s only master branch.)
+2. Run `vagrant plugin install vagrant-hostsupdater` from command line
 2. Run the command `vagrant up` from the directory
-3. Open your browser to http://localhost:8080
+3. Open your browser to http://vagrantpress.dev
 
 ## Working with the environment
 
 To log in to the local Wordpress installation:
 
-`http://localhost:8080/wp-admin/` the username is `admin`, the password is `vagrant`.
+`http://http://vagrantpress.dev/wp-admin/` the username is `admin`, the password is `vagrant`.
 
 You can access phpMyAdmin:
 
-`http://localhost:8080/phpmyadmin/` with username `wordpress`, password `wordpress`.
+`http://http://vagrantpress.dev/phpmyadmin/` with username `wordpress`, password `wordpress`.
 
 ## A Few Details
 

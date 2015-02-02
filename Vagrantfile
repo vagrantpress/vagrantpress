@@ -5,9 +5,17 @@ Vagrant.configure("2") do |config|
   config.vm.box = "trusty64"
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 
-  config.vm.network :forwarded_port, guest: 80, host: 8080
+  # set autcorrect flag to prevent port collisions
+  config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
 
+  # allows running commands globally in shell for installed composer libraries
   config.vm.provision :shell, path: "files/scripts/setup.sh"
+
+  # setup virtual hostname and provision local IP
+  config.vm.hostname = "vagrantpress.dev"
+  config.vm.network :private_network, :ip => "192.168.50.4"
+  config.hostsupdater.aliases = %w{www.vagrantpress.dev}
+  config.hostsupdater.remove_on_suspend = true
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
