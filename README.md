@@ -48,11 +48,11 @@ The procedure for starting up a working WordPress is as follows:
 
 To log in to the local Wordpress installation:
 
-`http://http://vagrantpress.dev/wp-admin/` the username is `admin`, the password is `vagrant`.
+`http://vagrantpress.dev/wp-admin/` the username is `admin`, the password is `vagrant`.
 
 You can access phpMyAdmin:
 
-`http://http://vagrantpress.dev/phpmyadmin/` with username `wordpress`, password `wordpress`.
+`http://vagrantpress.dev/phpmyadmin/` with username `wordpress`, password `wordpress`.
 
 ## A Few Details
 
