@@ -1,42 +1,65 @@
-# Jekyll-Bootstrap
+# VagrantPress
 
-The quickest way to start and publish your Jekyll powered blog. 100% compatible with GitHub pages
+*VagrantPress* is a packaged development environment for developing WordPress themes and modules.  
+I initially created this project to aid in developing child modules for a WordPress blog.
 
-## Usage
+# What's Installed
 
-For all usage and documentation please see: <http://jekyllbootstrap.com>
++ Ubuntu Trusty (14.04)
++ Wordpress 4.0
++ Mysql
++ Php
++ Phpmyadmin
++ Subversion
++ Git
++ Composer
++ ~~PEAR~~
++ Xdebug
++ PHPUnit - **installed via composer*
++ phploc - **installed via composer*
++ phpcpd - **installed via composer*
++ phpdcd - **installed via composer*
++ phpcs - **installed via composer*
++ phpdepend - **installed via composer*
++ phpmd - **installed via composer*
++ PHP_CodeBrowser - **installed via composer*
++ WordPress sniffs for phpcs
++ WordPress Unit Tests - **installed via composer*
 
-## Version
+**PEAR removed as support has reached end of life, see [End of Life for PEAR Installation Method](https://github.com/sebastianbergmann/phpunit/wiki/End-of-Life-for-PEAR-Installation-Method)*
 
-0.2.13 - stable and versioned using [semantic versioning](http://semver.org/).
+# Prerequisites
 
-## Contributing 
++ [Vagrant](http://www.vagrantup.com/downloads.html)
++ [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
++ [Vagrant Hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater)
 
-This repository tracks 2 projects:
+## Getting Started
 
-- **Jekyll-Bootstrap Framework.**  
-  The framework for which users should clone and build their blog on top of is available in the master branch.
-  
-  To contribute to the framework please make sure to checkout your branch based on `jb-development`!!
-  This is very important as it allows me to accept your pull request without having to publish a public version release.
-  
-  Small, atomic Features, bugs, etc.   
-  Use the `jb-development` branch but note it will likely change fast as pull requests are accepted.   
-  Please rebase as often as possible when working.   
-  Work on small, atomic features/bugs to avoid upstream commits affecting/breaking your development work.
-  
-  For Big Features or major API extensions/edits:   
-  This is the one case where I'll accept pull-requests based off the master branch.
-  This allows you to work in isolation but it means I'll have to manually merge your work into the next public release.
-  Translation : it might take a bit longer so please be patient! (but sincerely thank you).
- 
-- **Jekyll-Bootstrap Documentation Website.**    
-  The documentation website at <http://jekyllbootstrap.com> is maintained in the gh-pages branch.
-  Please fork and contribute documentation additions to this branch only.
+This is a fairly simple project to get up and running.  
+The procedure for starting up a working WordPress is as follows:
 
-The master and gh-pages branch do not share the same ancestry. Please treat them as completely separate git repositories!  (add) 
+1. Clone the project.  (There’s only master branch.)
+2. Run `vagrant plugin install vagrant-hostsupdater` from command line
+2. Run the command `vagrant up` from the directory
+3. Open your browser to http://vagrantpress.dev
 
+## Working with the environment
 
-## License
+To log in to the local Wordpress installation:
 
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+`http://vagrantpress.dev/wp-admin/` the username is `admin`, the password is `vagrant`.
+
+You can access phpMyAdmin:
+
+`http://vagrantpress.dev/phpmyadmin/` with username `wordpress`, password `wordpress`.
+
+## A Few Details
+
+* If you're needing a password (for anything - including mysql, it should be `vagrant`)
+
+## Getting Help
+
+Feel free to file an issue, create a pull request, or contact me at [my website][chadthompson].
+
+[chadthompson]: http://chadthompson.me

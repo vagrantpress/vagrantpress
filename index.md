@@ -1,100 +1,65 @@
----
-layout: page
-title: Say Hello to Vagrantpress
----
-{% include JB/setup %}
+# VagrantPress
 
+*VagrantPress* is a packaged development environment for developing WordPress themes and modules.  
+I initially created this project to aid in developing child modules for a WordPress blog.
 
-  **Vagrantpress** is a [Vagrant][] based development enviroment for creating and modifying [WordPress][] sites.  
-  
-  Using Vagrantpress is meant to be easy - you should be able to get started with four commands:
+# What's Installed
 
-  <div style="width:100%; padding: 5px; display:block; background-color:#073642;">
-  <code style="color:#93a1a1; background-color: inherit;">$ wget -O vagrantpress-master.zip https://github.com/chad-thompson/vagrantpress/archive/master.zip </code> <br />
-  <code style="color:#93a1a1; background-color: inherit;">$ unzip vagrantpress-master.zip</code> <br />
-  <code style="color:#93a1a1; background-color: inherit;">$ cd vagrantpress-master</code> <br />
-  <code style="color:#93a1a1; background-color: inherit;">$ vagrant up</code>
-  </div>
++ Ubuntu Trusty (14.04)
++ Wordpress 4.0
++ Mysql
++ Php
++ Phpmyadmin
++ Subversion
++ Git
++ Composer
++ ~~PEAR~~
++ Xdebug
++ PHPUnit - **installed via composer*
++ phploc - **installed via composer*
++ phpcpd - **installed via composer*
++ phpdcd - **installed via composer*
++ phpcs - **installed via composer*
++ phpdepend - **installed via composer*
++ phpmd - **installed via composer*
++ PHP_CodeBrowser - **installed via composer*
++ WordPress sniffs for phpcs
++ WordPress Unit Tests - **installed via composer*
 
+**PEAR removed as support has reached end of life, see [End of Life for PEAR Installation Method](https://github.com/sebastianbergmann/phpunit/wiki/End-of-Life-for-PEAR-Installation-Method)*
 
-  Once vagrant builds the environment, you'll have a clean development 
-  environment for creating your own WordPress modules and themes by opening `http://localhost:8080/`.
+# Prerequisites
 
++ [Vagrant](http://www.vagrantup.com/downloads.html)
++ [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
++ [Vagrant Hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater)
 
-###What Do I Need to Get Started?
+## Getting Started
 
-**First**, you'll need a copy of a Virtual Machine environment.  Install a copy of [Oracle VirtualBox][virtualbox], a freely supported VM environment for Vagrant.  (Vagrant also supports providers for different services, including a [provider for VMWare Fusion][vmwareprovider] - see the [Vagrant homepage][vagrant] for information.)
+This is a fairly simple project to get up and running.  
+The procedure for starting up a working WordPress is as follows:
 
-**Second**, you'll need a working copy of [Vagrant][].  You can find a copy of the latest version [on the Vagrant downloads page][vagrantdownloads], or follow directions in the [Vagrant documentation][vagrantdocumentation] to install vagrant for your environment.
+1. Clone the project.  (There’s only master branch.)
+2. Run `vagrant plugin install vagrant-hostsupdater` from command line
+2. Run the command `vagrant up` from the directory
+3. Open your browser to http://vagrantpress.dev
 
-**... and that's it.**  From here, you can follow the four-command script above or get your own copy of Vagrantpress [from the github repository][vpgithub].  Vagrantpress uses [Puppet] scripting to set up a working WordPress installation.
+## Working with the environment
 
-**NOTE: ** you can log in to the WordPress admin panel at `http://localhost:8080/wp-admin/` with the username `admin` and the password `vagrant`.
+To log in to the local Wordpress installation:
 
+`http://vagrantpress.dev/wp-admin/` the username is `admin`, the password is `vagrant`.
 
-###What Does VagrantPress Install?
+You can access phpMyAdmin:
 
-The Vagrantpress [puppet scripts][puppetlabs] will install a simple LAMP stack and clone a copy of the [WordPress github repository][wordpress-git] to the virtual machine shared folder.
+`http://vagrantpress.dev/phpmyadmin/` with username `wordpress`, password `wordpress`.
 
-**WARNING**:  The default puppet script will attempt to download a copy of a Vagrant 'box' from Amazon S3 that is approximately 500 MB in size.  Feel free to use this box, or if you have one locally, edit the `Vagrantfile` in the root directory to use a local (or easily obtained) box.  (See the [documentation][vagrantdocumentation] for more on Vagrant boxes.)
+## A Few Details
 
-The LAMP stack here (as tested) includes:
+* If you're needing a password (for anything - including mysql, it should be `vagrant`)
 
-* A virtual machine running the 14.04 LTS (i386/amd64) version of [Ubuntu][].
-* [The Apache2 WebServer][apache2]
-* [PHP5][php]
-* [The MySQL Database][mysql]
-* [WordPress][] v. 3.8  (With the git clone command, you'll have access to all tagged releases of WordPress, but the puppet script currently creates a database appropriate for v. 3.8.  Earlier versions have not been tested at this writing.  See the roadmap sections for more detail about where the project is going.)
+## Getting Help
 
-### Now That It's Up and Running, Now What?
+Feel free to file an issue, create a pull request, or contact me at [my website][chadthompson].
 
-You can use this environment to create, modify and experiment with WordPress theming and modules - either your own development or testing plugins for use on your 'real' WordPress site.
-
-The Vagrantpress puppet script creates a folder called `wordpress` in the directory where the Vagrant virtual machine is running - you can create your own themes and modules in the `wp-content` directory as you would for any other type of WordPress development.  This directory will also exist "on the host system", allowing you to use the development tools/editors of your choice.
-
-
-### How Do I Get Help or Contribute to the project?
-
-There are three ways you can get started using and contributing to the project itself:
-
-1.  Use the project!  Let us know how it works for you.
-1.  [Join the mailing list / Google Group][vagrantpress-list]
-1.  [Contribute to issues and code on GitHub][vagrantpress-github]
-
-[vagrantpress-list]:   https://groups.google.com/forum/#!forum/vagrantpress-users
-[vagrantpress-github]: https://github.com/chad-thompson/vagrantpress
-
-### What's New in the Project?
-
-Admittedly, some of the project - simple as it is - is aging.  I've put together something of a
-[roadmap][vagrantpress-roadmap] for your perusal.
-
-[vagrantpress-roadmap]: https://github.com/chad-thompson/vagrantpress/blob/development/README.md
-
-
-  
-[vagrant]: http://vagrantup.com
-[vagrantdownloads]: http://downloads.vagrantup.com/
-[vagrantdocumentation]: http://docs.vagrantup.com/v1/docs/index.html
-[virtualbox]: http://virtualbox.org
-[virtualboxdownloads]: https://www.virtualbox.org/wiki/Downloads
-[vpgithub]: https://github.com/chad-thompson/vagrantpress
-[vmwareprovider]: http://www.vagrantup.com/vmware
-  
-  [puppetlabs]: http://puppetlabs.org
-  [apache2]: http://httpd.apache.org
-  [php]: http://php.net
-  [mysql]: http://mysql.org
-  [ubuntu]: http://ubuntu.com
-  [wordpress]: http://wordpress.org
-  [wordpress-git]: http://github.org/wordpress/wordpress
-  
-
-
-###Authors and Contributors
-
-Vagrantpress is a personal project of  <a href="http://chadthompson.me" class="user-mention">@chad-thompson</a> who was looking for a simpler way to 
-  stand up multiple WordPress environments.  This project is one of the first
-  'real' Vagrant environments (and puppet scripts) that I've put together, but
-  I hope that someone else finds this as useful as I do.  Please contact me if you've found this tool useful, have some questions, or would like to help out.  Thanks!
-
+[chadthompson]: http://chadthompson.me
