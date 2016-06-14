@@ -14,13 +14,20 @@ Vagrant.configure("2") do |config|
   config.hostsupdater.aliases = %w{www.vagrantpress.dev}
   config.hostsupdater.remove_on_suspend = true
 
+   config.vm.provision :shell do |shell|
+      shell.inline = "
+        mkdir -p /etc/puppet/modules;
+        puppet module install puppetlabs-stdlib --version 4.11.0 --force;
+      "
+    end
+
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
     puppet.module_path = "puppet/modules"
     puppet.manifest_file  = "init.pp"
     puppet.options="--verbose --debug"
   end
-  
+
   # Fix for slow external network connections
   config.vm.provider :virtualbox do |vb|
     vb.memory = 2048
